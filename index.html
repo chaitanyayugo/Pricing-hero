@@ -1,0 +1,72 @@
+<!-- 1. ELITE HTML UPGRADE: Sexy Hero + Console Panel -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Odoo Pricing Engine Pro ✨</title>
+  <meta name="description" content="AI-free Odoo variant pricing calculator - Instant pricelists from messy data">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+</head>
+<body>
+  <!-- 🔥 HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>🚀 Odoo Pricing Engine</h1>
+      <p>Transform messy variants into perfect Odoo pricelists. Zero modules. Instant exports.</p>
+      <div class="stats">
+        <span>⚡ Live Parse</span>
+        <span>📊 Auto Base</span>
+        <span>✅ Odoo Ready</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="input-section">
+      <textarea id="input" rows="6" placeholder="Paste variants like: ABC(Chair)(FAB1,STD+) or drag JSON files...&#10;Supports multi-config + extras detection!"></textarea>
+      <div class="input-actions">
+        <button id="calculateBtn" class="btn-primary">💥 Calculate & Validate</button>
+        <button id="exportBtn" class="btn-secondary" disabled>📤 Export Odoo CSV</button>
+        <label class="file-drop">📁 Drop JSONs</label>
+      </div>
+    </section>
+
+    <div id="summary" class="summary-badge"></div>
+
+    <!-- 🔥 RESULTS TABLE -->
+    <section class="results-section">
+      <h2>📈 Results <span id="rowCount" class="badge">0</span></h2>
+      <div class="table-container">
+        <table id="output">
+          <thead>
+            <tr>
+              <th>Model</th><th>Code</th><th>Grade</th><th>Config</th><th>Price</th><th>Extra</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 🔥 ODOO PLAN PANEL -->
+    <section id="odooPanel" class="panel odoo-panel" style="display:none;">
+      <h2>🎯 Odoo Pricelist Ready</h2>
+      <div class="odoo-grid">
+        <!-- Dynamic content from JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔥 ELITE CONSOLE -->
+  <section class="console-panel">
+    <div class="console-header">
+      <h3>🔧 Debug Console</h3>
+      <button id="clearConsole" class="btn-clear">🗑️ Clear</button>
+    </div>
+    <div id="consoleOutput" class="console-body"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
